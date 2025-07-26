@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>포인트 카운터</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>포인트</h1>
+    <div class="point-display">
+      <div class="glass">
+        <div id="liquid"></div>
+      </div>
+      <div id="point-value">0 포인트</div>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <div class="option-form">
+      <input type="text" id="option-name" placeholder="옵션 이름">
+      <input type="number" id="option-amount" placeholder="가치">
+      <select id="option-type">
+        <option value="+">+증가</option>
+        <option value="-">-감소</option>
+      </select>
+      <button onclick="addOption()">추가</button>
+    </div>
+
+    <div id="option-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

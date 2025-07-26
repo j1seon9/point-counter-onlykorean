@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+h1 {
+  color: #ff7f50;
+}
+
+.point-display {
+  margin: 20px 0;
+}
+
+.glass {
+  width: 100%;
+  height: 150px;
+  border-radius: 30px;
+  background: #eee;
+  overflow: hidden;
+  position: relative;
+}
+
+#liquid {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  max-height: 100%;
+  background: linear-gradient(to top, #ff8c42, #ffb347);
+  transition: height 0.3s ease-in-out;
+  border-radius: 0 0 30px 30px;
+}
+
+#point-value {
+  margin-top: 10px;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.message {
+  color: red;
+  height: 1.5em;
+}
+
+.option-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.option-form input,
+.option-form select {
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  flex: 1;
+  min-width: 100px;
+}
+
+.option-form button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #ffa07a;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.option-form button:hover {
+  background-color: #ff7f50;
+}
+
+#option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffaf0;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.option-button {
+  border: none;
+  border-radius: 20px;
+  background-color: #ffdead;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.delete-button,
+.move-up-button,
+.move-down-button {
+  background-color: #ff6b6b;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.move-up-button,
+.move-down-button {
+  background-color: #ffa500;
+}
+
+.amount-input {
+  width: 60px;
+  border-radius: 20px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .option-form {
+    flex-direction: column;
+  }
+
+  .option-form input,
+  .option-form select,
+  .option-form button {
+    width: 100%;
+  }
+}
